@@ -1,7 +1,13 @@
 
 // Menu Mobile
 
+document.getElementById("hamburguer-icon").onclick = function() {
+  document.getElementById("sliding-header-menu-outer").style['right'] = "0px";
+}
 
+document.getElementById("sliding-header-menu-close-button").onclick = function() {
+  document.getElementById("sliding-header-menu-outer").style['right'] = "-320px";
+}
 
 
 // About us Tab
@@ -12,10 +18,24 @@ var aboutUs = {
   "Valores": "<ul><li>Comprometimento</li><li>Inovação</li><li>Ética profissional</li><li>Superação dos resultados</li><li>Melhoria contínua</li></ul>"
 };
 
-var unseletected_color = "#646872";
-var seletected_color = "#2A2D34";
+var unselected_color = "#646872";
+var selected_color = "#2A2D34";
 
+let single_tabs = document.getElementsByClassName("single-tab");
 
+for(let i = 0; i < 3; i++){
+  single_tabs[i].onclick = function() {
+    
+    document.getElementById("box-text").innerHTML = aboutUs[this.innerHTML]
+    
+    this.style["background-color"] = selected_color;
+    for(let y = 0; y < 3; y++){
+      if(single_tabs[y] != this){
+        single_tabs[y].style["background-color"] = unselected_color;
+      }
+    }
+  }
+}
 
 // Slider de serviços
 
