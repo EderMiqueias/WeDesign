@@ -57,6 +57,23 @@ var our_services = [
   
 ];
 
+let servicos_index = 0
+let los = (our_services.length - 1) * (-1)
+
+document.getElementById("service-next").onclick = function () {
+  servicos_index += servicos_index > 1 ? los : 1;
+  change_servicos_text(servicos_index);
+}
+
+document.getElementById("service-previous").onclick = function () {
+  servicos_index -= servicos_index > 0 ? 1 : los;
+  change_servicos_text(servicos_index);
+}
+
+function change_servicos_text(index){
+  document.getElementById("service-title").innerHTML = our_services[index].title
+  document.getElementById("service-text").innerHTML = our_services[index].text 
+}
 
 // Data Footer
 
