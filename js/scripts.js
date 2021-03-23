@@ -71,13 +71,14 @@ document.getElementById("service-previous").onclick = function () {
 }
 
 function change_servicos_text(index){
-  document.getElementById("service-title").innerHTML = our_services[index].title
-  document.getElementById("service-text").innerHTML = our_services[index].text 
+  document.getElementById("service-title").innerHTML = our_services[index].title;
+  document.getElementById("service-text").innerHTML = our_services[index].text;
 }
 
 // Data Footer
 
-
+let ano_atual = new Date;
+document.getElementById("current_year").innerHTML = ano_atual.getFullYear();
 
   
    
