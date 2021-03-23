@@ -80,8 +80,6 @@ function change_servicos_text(index){
 let ano_atual = new Date;
 document.getElementById("current_year").innerHTML = ano_atual.getFullYear();
 
+// API KEY
+// AIzaSyDym7FiwPYag7_yIrvrUPbx91fW4VyhhQE
   
-   
-
-
-   
